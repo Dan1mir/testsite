@@ -1,14 +1,15 @@
 <?php
 session_start();
 
-// Минимальный пример: логин и пароль "admin" / "1234"
-$correctLogin = "admin";
-$correctPassword = "3nIg4FxFzHNj9BeyKe5jQaumF3KQGX";
+$config = require __DIR__ . "/../secure/config.php";  
+
+$correctLogin = $config["login"];
+$correctHash  = $config["password_hash"];
 
 $login = $_POST['login'] ?? '';
 $password = $_POST['password'] ?? '';
 
-if ($login === $correctLogin && $password === $correctPassword) {
+if ($login === $correctLogin && password_verify($password, $correctHash)) {
     $_SESSION['auth'] = true;
     echo "OK";
 } else {

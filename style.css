@@ -1,17 +1,24 @@
 body {
+	min-height: 100vh;
     margin: 0;
+    padding: 0;
     background: #000;
     font-family: "Arial Black", sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 250px;
+	justify-content: center;
+}
+
+.login{
+	margin-top: -68px;
 }
 
 .login-title {
     font-size: 48px;
     margin-bottom: 20px;
+	margin-left: 20px;
 }
 
 .login-box {
@@ -53,11 +60,7 @@ body {
     cursor: pointer;
 }
 
-/* Адаптив для планшетов */
 @media (max-width: 1024px) {
-    body {
-        padding-top: 150px;
-    }
     
     .login-box {
         width: 90%;
@@ -65,10 +68,8 @@ body {
     }
 }
 
-/* Адаптив для мобильных устройств */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -99,7 +100,6 @@ body {
     }
 }
 
-/* Адаптив для очень маленьких экранов */
 @media (max-width: 480px) {
     .login-title {
         font-size: 28px;
