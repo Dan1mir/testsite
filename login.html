@@ -23,7 +23,6 @@ document.getElementById("loginBtn").onclick = function() {
     const login = document.getElementById("login").value;
     const pass = document.getElementById("password").value;
 
-    // Отправка POST-запроса на сервер
     const formData = new FormData();
     formData.append("login", login);
     formData.append("password", pass);
@@ -34,7 +33,7 @@ document.getElementById("loginBtn").onclick = function() {
             if (res === "OK") {
                 window.location.href = "index.php";
             } else {
-                alert("Неверный логин или пароль");
+                alert("Wrong login or pass");
             }
         });
 };
