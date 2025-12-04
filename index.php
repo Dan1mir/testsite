@@ -6,4 +6,4 @@ if (empty($_SESSION['auth'])) {
     exit;
 }
 
-readfile("index.html");
+readfile("/var/www/secure/index.html");
